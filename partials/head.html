@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#1b1614">
+<meta name="author" content="Astha Shukla">
+<meta property="og:site_name" content="Astha Shukla">
+<meta property="og:image" content="https://aman-0402.github.io/asport/images/astha-shukla.jpg">
+<meta property="og:image:alt" content="Portrait of Astha Shukla">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/src/styles/main.css">
+<link rel="expect" href="#main" blocking="render">
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try {
+      if (!still && !sessionStorage.getItem('astha-visited')) root.classList.add('is-loading');
+      if (!still && sessionStorage.getItem('astha-curtain') === '1') root.classList.add('curtain-in');
+    } catch (e) {}
+    setTimeout(function () {
+      if (!root.classList.contains('app-ready')) root.classList.add('reveal-fallback');
+    }, 3500);
+  })();
+</script>
