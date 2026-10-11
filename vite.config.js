@@ -6,8 +6,8 @@ const root = import.meta.dirname;
 const pages = ['index', 'about', 'skills', 'projects', 'certifications', 'contact'];
 
 /**
- * Replaces `<!-- @include name -->` with the contents of partials/name.html.
- * Keeps nav, footer, and shared head markup in one place.
+ * Inject shared HTML partials and make public assets work when deployed
+ * under the GitHub Pages project path (/new3d/).
  */
 function htmlPartials() {
   const pattern = /<!--\s*@include\s+([\w-]+)\s*-->/g;
@@ -16,9 +16,14 @@ function htmlPartials() {
     transformIndexHtml: {
       order: 'pre',
       handler(html) {
-        return html.replace(pattern, (_, name) =>
-          readFileSync(resolve(root, 'partials', `${name}.html`), 'utf8').trim()
-        );
+        return html
+          .replace(pattern, (_, name) =>
+            readFileSync(resolve(root, 'partials', `${name}.html`), 'utf8').trim()
+          )
+          // Links to public/ assets must be relative on project Pages sites.
+          .replace(/(["'])\/(images\/|favicon\.svg)/g, '$1$2')
+          // Canonical, Open Graph, and structured-data URLs.
+          .replaceAll('https://aman-0402.github.io/asport/', 'https://workwithaastha.github.io/new3d/');
       },
     },
     handleHotUpdate({ file, server }) {
@@ -35,7 +40,6 @@ export default defineConfig({
   plugins: [htmlPartials()],
   build: {
     target: 'es2022',
-    // three.js core lands in one lazy chunk (~130 kB gzip); only loaded when WebGL is available.
     chunkSizeWarningLimit: 600,
     rollupOptions: {
       input: Object.fromEntries(pages.map((p) => [p, resolve(root, `${p}.html`)])),
