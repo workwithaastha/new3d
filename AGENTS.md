@@ -48,8 +48,12 @@ npm run preview   # Serve dist/ locally
 │   ├── ui/                reusable behaviors (split text, magnetic buttons, counters, tilt, filter)
 │   └── styles/            tokens.css, base.css, layout.css, components.css, pages/<page>.css
 ├── .github/workflows/     deploy.yml (Pages)
-└── web-dev-skills/        reference material only, gitignored, never shipped
+└── web-dev-skills/        optional local reference material, gitignored, never shipped (absent in a fresh clone)
 ```
+
+## Deploy URL
+
+Live site: `https://workwithaastha.github.io/new3d/`. `vite.config.js` has `base: './'` and the `html-partials` plugin rewrites the placeholder host `https://aman-0402.github.io/asport/` in canonical, Open Graph and JSON-LD URLs to the live URL above, and strips the leading `/` from `images/` and `favicon.svg` links. Keep `public/sitemap.xml` and `public/robots.txt` on the same URL.
 
 ## Conventions
 
@@ -91,7 +95,7 @@ All copy comes from Astha Shukla's resume/profile (see git history of the origin
 - BBA Marketing, Allenhouse Business School, Kanpur, 2025 to present
 - Class XII 86%, Class X 80%, K.R. Education Centre
 - Agentic AI Certified Foundations Associate, Oracle University (Oracle Certified), September 18, 2026
-- Digital Marketing certification, HubSpot Academy
+- Digital Marketing Certified, HubSpot Academy (valid Sep 11, 2026 to Oct 10, 2028)
 - Projects: Consumer Preference & Online Shopping Research; Marketing & Business Presentations
 - Email: aasthashuklaastha44@gmail.com, based in Kanpur, Uttar Pradesh
 
@@ -113,7 +117,7 @@ Status legend: `[ ]` todo, `[x]` done.
 ### Phase 1: Vite foundation and design system
 - [x] `package.json`, Vite MPA config with 6 entries and partial-include plugin
 - [x] Move assets to `public/` (rename certificate to a URL-safe filename)
-- [x] New token system (OKLCH, dark default + light), self-hosted fonts, base/layout/components CSS
+- [x] New token system (OKLCH, dark only after Phase 5), self-hosted fonts, base/layout/components CSS
 - [x] Shared nav (with mobile menu) and footer as partials
 - [x] Port all six pages' content into the new markup skeleton (no 3D yet), remove old `styles.css`/`main.js`
 - [x] Build passes
