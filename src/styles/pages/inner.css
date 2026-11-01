@@ -80,6 +80,20 @@
   font-size: var(--step-2);
 }
 
+.timeline__points {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  max-width: 68ch;
+  padding-left: var(--space-5);
+  list-style: disc;
+  color: var(--text-muted);
+}
+
+.experience {
+  padding-top: 0;
+}
+
 .strengths__grid,
 .interests__grid,
 .achievements__grid {
@@ -170,8 +184,9 @@
 }
 
 .skill-sphere[data-active="marketing"] li[data-group="marketing"],
-.skill-sphere[data-active="professional"] li[data-group="professional"],
-.skill-sphere[data-active="digital"] li[data-group="digital"] {
+.skill-sphere[data-active="research"] li[data-group="research"],
+.skill-sphere[data-active="tools"] li[data-group="tools"],
+.skill-sphere[data-active="soft"] li[data-group="soft"] {
   color: var(--accent-ink);
   background: var(--accent);
   border-color: var(--accent);

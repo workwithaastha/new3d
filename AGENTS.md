@@ -90,14 +90,17 @@ Live site: `https://workwithaastha.github.io/new3d/`. `vite.config.js` has `base
 
 ## Content source
 
-All copy comes from Astha Shukla's resume/profile (see git history of the original static pages and `profile-readme.md`). Facts to keep exact:
+All copy comes from Astha Shukla's resume (Digital Marketing Intern version, October 2026; kept locally, gitignored because it contains a phone number). Facts to keep exact:
 
-- BBA Marketing, Allenhouse Business School, Kanpur, 2025 to present
-- Class XII 86%, Class X 80%, K.R. Education Centre
-- Agentic AI Certified Foundations Associate, Oracle University (Oracle Certified), September 18, 2026
+- Digital Marketing Intern, DeepSetu AI Technologies, October 2026 - Present: grew social media following from 30 to 1K in 2 weeks
+- Digital Marketing & Lead Generation Intern, ARX Infotech, October 2026 - Present, remote: LinkedIn prospecting, lead lists in Google Sheets and HubSpot CRM, email outreach
+- Projects (October 2026): Competitor and Social Media Audit (DeepSetu AI Technologies); Email Marketing Campaign (ARX Infotech)
+- BBA Marketing, Allenhouse Business School, Kanpur, 2025 - 2027; Class XII Commerce (CBSE) 2024 and Class X (CBSE) 2022, K.R. Education Centre (no percentages on the resume, so none on the site)
 - Digital Marketing Certified, HubSpot Academy (valid Sep 11, 2026 to Oct 10, 2028)
-- Projects: Consumer Preference & Online Shopping Research; Marketing & Business Presentations
-- Email: aasthashuklaastha44@gmail.com, based in Kanpur, Uttar Pradesh
+- Agentic AI Certified Foundations Associate, Oracle University (Oracle Certified), September 18, 2026 (not on the resume, kept because the certificate exists)
+- Digital Marketing Training, Allenhouse Business School, 2026, ongoing (never call it a completed certification)
+- Email: aasthashuklaastha44@gmail.com, LinkedIn: linkedin.com/in/astha-shukla-96891a430, based in Kanpur, Uttar Pradesh
+- The resume lists the portfolio as workwithaastha.github.io/portfolio; this site deploys at workwithaastha.github.io/new3d/
 
 ## Git workflow
 

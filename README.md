@@ -1,6 +1,6 @@
 # Astha Shukla | Portfolio
 
-A six-page portfolio for Astha Shukla, BBA Marketing student at Allenhouse Business School, Kanpur. It uses 3D graphics and scroll-driven animation: a WebGL scene moves with the page, and each page has its own scroll effects.
+A six-page portfolio for Astha Shukla, Digital Marketing Intern and BBA Marketing student at Allenhouse Business School, Kanpur. It uses 3D graphics and scroll-driven animation: a WebGL scene moves with the page, and each page has its own scroll effects.
 
 ## Pages
 
@@ -10,7 +10,7 @@ A six-page portfolio for Astha Shukla, BBA Marketing student at Allenhouse Busin
 | `about.html` | Education timeline whose line fills as you scroll, strengths that light up in order, portrait parallax |
 | `skills.html` | 3D sphere of skill labels that sticks beside the lists and highlights the group in view |
 | `projects.html` | Stacked case studies that tilt in from 3D and shrink back under the next one, with a filter |
-| `certifications.html` | Certificate swings in from a 3D angle and settles flat, numbers count up |
+| `certifications.html` | Each certificate swings in from a 3D angle and settles flat; ongoing training is listed as in progress |
 | `contact.html` | Butterfly that follows the scroll and leans toward the pointer, large email link with a copy button |
 
 Pages change with cross-document View Transitions. Browsers without them get a coral curtain wipe instead.

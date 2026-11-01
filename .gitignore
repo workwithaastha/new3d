@@ -2,3 +2,7 @@ node_modules/
 dist/
 web-dev-skills/
 assets-src/
+
+# local source files (resume contains a phone number)
+*.pdf
+Digital Marketing Certified by HubSpot Academy.png
