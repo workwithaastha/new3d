@@ -316,3 +316,35 @@
   border: 1px solid var(--line);
   background: var(--surface);
 }
+
+/* Claymation sticker overlapping the intro portrait */
+.intro__media {
+  position: relative;
+  max-width: 460px;
+  padding-bottom: var(--space-6);
+}
+
+.intro__sticker {
+  position: absolute;
+  right: calc(-1 * var(--space-4));
+  bottom: 0;
+  width: 44%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 4px solid var(--bg);
+  box-shadow: var(--shadow-card), 0 0 0 1px var(--line);
+  rotate: 5deg;
+}
+
+.intro__sticker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .intro__sticker {
+    right: calc(-1 * var(--space-7));
+  }
+}

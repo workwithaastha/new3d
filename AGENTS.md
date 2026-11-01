@@ -63,7 +63,7 @@ Live site: `https://workwithaastha.github.io/new3d/`. `vite.config.js` has `base
 - **Styling:** CSS only, no inline `<style>` blocks, no inline `style=""` except values set by JS animation. Tokens in `src/styles/tokens.css` (OKLCH). Dark theme only (no light theme or toggle).
 - **Accent lock:** coral is the only UI accent. Mint appears only as a lighting tint inside 3D scenes.
 - **Radius system:** buttons/tags full-pill, cards and media 14px, nothing larger.
-- **Motion rules:** animate `transform`/`opacity` (and shader uniforms) only. UI transitions under 300ms with `cubic-bezier(0.23, 1, 0.32, 1)`. Scroll-scrubbed motion may be longer.
+- **Motion rules:** animate `transform`/`opacity` (and shader uniforms) only. UI transitions under 300ms with `cubic-bezier(0.23, 1, 0.32, 1)`. Scroll-scrubbed motion may be longer. One exception: the About gallery panels animate `flex-grow` (Skiper 52 hover expand).
 - **Reduced motion is mandatory:** `prefers-reduced-motion: reduce` disables Lenis, scrubbed 3D camera moves, and split-text; content must render fully visible with no animation.
 - **No-WebGL fallback:** if WebGL is unavailable, skip Three.js entirely and show the CSS gradient backdrop. No page may depend on the canvas for content.
 - **Performance budget:** device pixel ratio capped at 2 (1.5 on mobile), ~30fps on mobile/low-power, pause render loop when tab hidden, dispose scene on page leave, engine loads after `load` + idle with `compileAsync`, software WebGL treated as no WebGL (`?webgl=force` to override). Target Lighthouse Performance >= 85 on mobile.

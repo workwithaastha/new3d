@@ -510,3 +510,77 @@
   font-weight: 650;
   color: var(--text);
 }
+
+/* ================= About gallery (hover expand, after Skiper 52) ================= */
+.gallery__row {
+  display: flex;
+  gap: var(--space-2);
+  height: clamp(320px, 62vw, 560px);
+  margin-top: var(--space-7);
+}
+
+.gallery__item {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  /* Panels grow on hover; this is the one intentional layout transition (see AGENTS.md). */
+  transition: flex-grow 420ms var(--ease-in-out);
+}
+
+.gallery__item.is-active {
+  flex-grow: 4;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
+  transition: transform 700ms var(--ease-out);
+}
+
+.gallery__item.is-active img {
+  transform: scale(1);
+}
+
+.gallery__item figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: var(--space-6) var(--space-4) var(--space-4);
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: oklch(0.97 0.01 50);
+  white-space: nowrap;
+  background: linear-gradient(to top, oklch(0.1 0.02 35 / 0.75), transparent);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity var(--dur-ui) var(--ease-out), transform var(--dur-ui) var(--ease-out);
+}
+
+.gallery__item.is-active figcaption {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .gallery__row {
+    height: clamp(260px, 80vw, 380px);
+  }
+
+  .gallery__item.is-active {
+    flex-grow: 2.4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery__item,
+  .gallery__item img,
+  .gallery__item figcaption {
+    transition: none;
+  }
+}

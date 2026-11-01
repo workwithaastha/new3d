@@ -155,3 +155,20 @@ export function initScrollProgress(env, scroll) {
   widget.addEventListener('pointerup', end);
   widget.addEventListener('pointercancel', end);
 }
+
+/** Skiper 52: hover or focus a panel to expand it while its neighbours shrink. */
+export function initHoverExpand() {
+  document.querySelectorAll('[data-hover-expand]').forEach((row) => {
+    const items = [...row.children];
+    if (!items.length) return;
+    const home = Math.floor(items.length / 2);
+    const set = (i) => items.forEach((el, j) => el.classList.toggle('is-active', i === j));
+    set(home);
+    items.forEach((el, i) => {
+      el.addEventListener('pointerenter', () => set(i));
+      el.addEventListener('focus', () => set(i));
+      el.addEventListener('click', () => set(i));
+    });
+    row.addEventListener('pointerleave', () => set(home));
+  });
+}

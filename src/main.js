@@ -3,7 +3,7 @@ import { initNav } from './core/nav.js';
 import { initScroll } from './core/scroll.js';
 import { runLoader, initTransitions } from './core/transitions.js';
 import { initYear, initCopyEmail, initRotator, initProjectFilter } from './ui/misc.js';
-import { initTextRoll, initMouseFollow, initScrollProgress } from './ui/skiper.js';
+import { initTextRoll, initMouseFollow, initScrollProgress, initHoverExpand } from './ui/skiper.js';
 import {
   initSplitReveals,
   initReveals,
@@ -67,6 +67,7 @@ initMarquee(env, scroll);
 initTextRoll(env);
 initMouseFollow(env);
 initScrollProgress(env, scroll);
+initHoverExpand();
 
 document.documentElement.classList.add('app-ready');
 
