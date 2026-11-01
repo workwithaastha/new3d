@@ -9,4 +9,5 @@
 @import './pages/home.css';
 @import '../components/InteractiveCharacter/InteractiveCharacter.css';
 @import './pages/inner.css';
+@import './skiper.css';
 @import './transitions.css';

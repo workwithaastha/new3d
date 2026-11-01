@@ -3,6 +3,7 @@ import { initNav } from './core/nav.js';
 import { initScroll } from './core/scroll.js';
 import { runLoader, initTransitions } from './core/transitions.js';
 import { initYear, initCopyEmail, initRotator, initProjectFilter } from './ui/misc.js';
+import { initTextRoll, initMouseFollow, initScrollProgress } from './ui/skiper.js';
 import {
   initSplitReveals,
   initReveals,
@@ -63,6 +64,9 @@ initCounters(env);
 initMagnetic(env);
 initTilt(env);
 initMarquee(env, scroll);
+initTextRoll(env);
+initMouseFollow(env);
+initScrollProgress(env, scroll);
 
 document.documentElement.classList.add('app-ready');
 
